@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from google.appengine.ext import ndb
-
+asd
 
 class Guest(ndb.Model):
     first = ndb.StringProperty()
