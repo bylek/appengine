@@ -1,0 +1,28 @@
+name: Install jq
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  install-jq:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Update apt and install jq
+      run: |
+        ls -la /etc/apt
+        cat /etc/apt/sources.list || true
+        sudo apt-get update
+        sudo apt-get install -y jq
+        
+    - name: Verify jq installation
+      run: |
+        jq --version
+        echo "jq installed successfully!"
