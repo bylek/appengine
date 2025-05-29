@@ -17,8 +17,8 @@ jobs:
       
     - name: Update apt and install jq
       run: |
-        ls -la /etc/apt
-        cat /etc/apt/sources.list || true
+        cat /etc/apt/apt-mirrors.txt
+        cat /etc/apt/sources.list.d/* || true
         sudo apt-get update
         sudo apt-get install -y jq
         
