@@ -4,3 +4,11 @@
   events:
   - type: PUSH
   fail_on_prepare_env_warning: true
+  actions:
+  - action: pwd
+    type: BUILD
+    docker_image_name: buddy/localshell
+    docker_image_tag: ubuntu_24.04
+    execute_commands:
+    - pwd
+    shell: BASH
