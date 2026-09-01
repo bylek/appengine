@@ -1,0 +1,7 @@
+- sandbox: ws
+  name: ws
+  os: ubuntu:24.04
+  endpoints:
+  - name: www
+    endpoint: 80
+    region: EU
